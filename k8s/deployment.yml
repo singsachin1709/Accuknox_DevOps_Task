@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: simple-app
-          image: <IMAGE_PLACEHOLDER>
+          image: sachin62/wisecowapp:latest
           ports:
             - containerPort: 5000
 
