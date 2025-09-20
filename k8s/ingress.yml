@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - your-domain.com   # change to your domain
+        - accuknox-dev-ops-task.vercel.app   # change to your domain
       secretName: simple-app-tls
   rules:
-    - host: your-domain.com
+    - host: accuknox-dev-ops-task.vercel.app
       http:
         paths:
           - path: /
