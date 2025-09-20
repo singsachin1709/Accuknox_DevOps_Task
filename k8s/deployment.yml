@@ -16,5 +16,5 @@ spec:
         - name: simple-app
           image: sachin62/wisecowapp:latest
           ports:
-            - containerPort: 4499
+            - containerPort: 5000
 
