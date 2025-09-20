@@ -30,8 +30,8 @@ jobs:
       # 🔹 Build and Push to Docker Hub
       - name: Build, Tag, and Push Image
         run: |
-          IMAGE_REPO= sachin62/wisecowapp
-          IMAGE_TAG= latest
+          IMAGE_REPO=sachin62/wisecowapp
+          IMAGE_TAG=latest
           docker build -t $IMAGE_REPO:$IMAGE_TAG .
           docker push $IMAGE_REPO:$IMAGE_TAG
 
