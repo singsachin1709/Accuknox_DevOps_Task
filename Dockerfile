@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update && \
-    apt-get install -y fortune-mod cowsay perl netcat-openbsd && \
+    apt-get install -y fortune-mod cowsay netcat-openbsd && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PATH="/usr/games:${PATH}"
