@@ -11,10 +11,7 @@ spec:
     matchPaths:
       - path: /etc
         action: Block
-        recursive: true
   file:
     matchPaths:
       - path: /etc
         action: Block
-        recursive: true
-
