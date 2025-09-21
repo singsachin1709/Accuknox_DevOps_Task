@@ -3,22 +3,19 @@ apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
   name: zero-trust-simple-app
-  namespace: default       # adjust if your Deployment is in another namespace
+  namespace: default
 spec:
   selector:
     matchLabels:
       app: simple-app
   severity: 10
   message: "Zero-trust: only allow wisecow app expected behavior"
-  # Process rules: only let the container run its app binary and basic tools
   process:
     matchPaths:
       - path: /bin/sh
       - path: /bin/ls
       - path: /bin/cat
       - path: /usr/bin/python3
-      # add your app binary path if known (wisecow is a Python app, so python3 covers it)
-  # File rules: allow app source and system libs, block others
   file:
     matchDirectories:
       - dir: /app
@@ -31,17 +28,14 @@ spec:
         recursive: true
     matchPaths:
       - path: /dev/null
-  # Network rules: only allow TCP 4499 (your containerPort)
   network:
     matchProtocols:
       - protocol: tcp
     matchPorts:
       - port: 4499
-  # Capabilities: drop dangerous ones (like raw sockets)
   capabilities:
     matchCapabilities:
       - capability: net_raw
-  action:
-    Block: {}
+  action: Block
 
 EOF
