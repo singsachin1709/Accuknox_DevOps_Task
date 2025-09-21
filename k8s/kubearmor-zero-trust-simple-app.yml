@@ -1,4 +1,3 @@
-vi <<EOF > kubearmor-zero-trust-simple-app.yml
 apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
@@ -37,4 +36,3 @@ spec:
     matchCapabilities:
       - capability: net_raw
   action: Block
-EOF
