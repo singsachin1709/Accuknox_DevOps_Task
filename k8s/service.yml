@@ -7,6 +7,6 @@ spec:
   selector:
     app: simple-app
   ports:
-    - port: 4499
+    - port: 80
       targetPort: 4499
 
