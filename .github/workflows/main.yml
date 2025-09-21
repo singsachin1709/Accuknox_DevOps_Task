@@ -45,4 +45,9 @@ jobs:
           kubectl apply -f k8s/service.yml
           kubectl apply -f k8s/issuer.yml
           kubectl apply -f k8s/ingress.yml
-          kubectl apply -f kubearmor-zero-trust-simple-app.yml
+          
+      - name: Apply KubeArmor Policy
+        run: |
+          kubectl apply -f k8s/kubearmor-zero-trust-simple-app.yml
+  
+         
