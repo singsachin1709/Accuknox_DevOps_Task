@@ -17,13 +17,13 @@ spec:
       - path: /usr/bin/python3
   file:
     matchDirectories:
-      - dir: /app
+      - dir: /app/
         recursive: true
-      - dir: /etc/ssl
+      - dir: /etc/ssl/
         recursive: true
-      - dir: /usr/lib
+      - dir: /usr/lib/
         recursive: true
-      - dir: /lib
+      - dir: /lib/
         recursive: true
     matchPaths:
       - path: /dev/null
