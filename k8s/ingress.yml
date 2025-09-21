@@ -8,9 +8,20 @@ metadata:
 spec:
   tls:
     - hosts:
-        - www.devopstutorial.xyz  # change to your domain
+        - www.devopstutorial.xyz
+        - devopstutorial.xyz # change to your domain
       secretName: simple-app-tls
   rules:
+    - host: www.devopstutorial.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: simple-app-service
+                port:
+                  number: 80
     - host: www.devopstutorial.xyz
       http:
         paths:
