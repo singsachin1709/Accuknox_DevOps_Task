@@ -1,4 +1,4 @@
-cat <<EOF > kubearmor-zero-trust-simple-app.yaml
+cat <<EOF > kubearmor-zero-trust-simple-app.yml
 apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
