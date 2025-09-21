@@ -30,8 +30,7 @@ spec:
   network:
     matchProtocols:
       - protocol: tcp
-    matchPorts:
-      - port: 4499
+    # removed matchPorts
   capabilities:
     matchCapabilities:
       - capability: net_raw
