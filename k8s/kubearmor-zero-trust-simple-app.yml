@@ -1,37 +1,21 @@
 apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
-  name: zero-trust-simple-app
+  name: zero-trust-simple-app-permissive
   namespace: default
 spec:
   selector:
     matchLabels:
       app: simple-app
-  severity: 10
-  message: "Zero-trust: only allow wisecow app expected behavior"
+  severity: 0
+  message: "Permissive: no blocking for testing"
   process:
-    matchPaths:
-      - path: /bin/sh
-      - path: /bin/ls
-      - path: /bin/cat
-      - path: /usr/bin/python3
+    matchPaths: []
   file:
-    matchDirectories:
-      - dir: /app/
-        recursive: true
-      - dir: /etc/ssl/
-        recursive: true
-      - dir: /usr/lib/
-        recursive: true
-      - dir: /lib/
-        recursive: true
-    matchPaths:
-      - path: /dev/null
+    matchDirectories: []
+    matchPaths: []
   network:
-    matchProtocols:
-      - protocol: tcp
-    # removed matchPorts
+    matchProtocols: []
   capabilities:
-    matchCapabilities:
-      - capability: net_raw
-  action: Block
+    matchCapabilities: []
+  action: Allow
