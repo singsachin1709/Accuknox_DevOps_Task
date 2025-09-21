@@ -22,7 +22,7 @@ spec:
                 name: simple-app-service
                 port:
                   number: 80
-    - host: www.devopstutorial.xyz
+    - host: devopstutorial.xyz
       http:
         paths:
           - path: /
