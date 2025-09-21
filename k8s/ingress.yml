@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - www.devopstutorial.xyz  # change to your domain
+        - devopstutorial.xyz  # change to your domain
       secretName: simple-app-tls
   rules:
-    - host: www.devopstutorial.xyz
+    - host: devopstutorial.xyz
       http:
         paths:
           - path: /
