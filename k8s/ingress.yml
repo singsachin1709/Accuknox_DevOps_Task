@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - accuknox-dev-ops-task-vyhf-q3eq4z5v9.vercel.app  # change to your domain
+        - www.devopstutorial.xyz  # change to your domain
       secretName: simple-app-tls
   rules:
-    - host: accuknox-dev-ops-task-vyhf-q3eq4z5v9.vercel.app
+    - host: www.devopstutorial.xyz
       http:
         paths:
           - path: /
