@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: simple-app
-  severity: 0
+  severity: 1   # minimum allowed value
   message: "Permissive: no blocking for testing"
   process:
     matchPaths: []
