@@ -1,21 +1,20 @@
 apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
-  name: zero-trust-simple-app-permissive
+  name: deny-etc-write
   namespace: default
 spec:
   selector:
     matchLabels:
-      app: simple-app
-  severity: 1   # minimum allowed value
-  message: "Permissive: no blocking for testing"
+      app: simple-app   # Apply only to simple-app pods
   process:
-    matchPaths: []
+    matchPaths:
+      - path: /etc
+        action: Block
+        recursive: true
   file:
-    matchDirectories: []
-    matchPaths: []
-  network:
-    matchProtocols: []
-  capabilities:
-    matchCapabilities: []
-  action: Allow
+    matchPaths:
+      - path: /etc
+        action: Block
+        recursive: true
+
