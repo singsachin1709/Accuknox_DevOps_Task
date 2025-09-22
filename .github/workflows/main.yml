@@ -48,6 +48,6 @@ jobs:
           
       - name: Apply KubeArmor Policy
         run: |
-          kubectl apply -f k8s/kubearmor-zero-trust-simple-app.yml
+          kubectl apply -f kubearmor-policy-checking-pngs/kubearmor-zero-trust-simple-app.yml
   
          
