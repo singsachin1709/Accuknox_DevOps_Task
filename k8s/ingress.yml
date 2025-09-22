@@ -9,7 +9,7 @@ spec:
   tls:
     - hosts:
         - www.devopstutorial.xyz
-        - devopstutorial.xyz # change to your domain
+        - devopstutorial.xyz
       secretName: simple-app-tls
   rules:
     - host: www.devopstutorial.xyz
