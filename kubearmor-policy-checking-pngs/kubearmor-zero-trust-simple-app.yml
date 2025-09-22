@@ -1,0 +1,17 @@
+apiVersion: security.kubearmor.com/v1
+kind: KubeArmorPolicy
+metadata:
+  name: deny-etc-write
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: simple-app   # Apply only to simple-app pods
+  process:
+    matchPaths:
+      - path: /etc
+        action: Block
+  file:
+    matchPaths:
+      - path: /etc
+        action: Block
