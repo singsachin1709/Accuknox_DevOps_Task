@@ -1,7 +1,6 @@
 import psutil
 import datetime
 
-# Thresholds
 CPU_THRESHOLD = 80  
 MEMORY_THRESHOLD = 80
 DISK_THRESHOLD = 90 
