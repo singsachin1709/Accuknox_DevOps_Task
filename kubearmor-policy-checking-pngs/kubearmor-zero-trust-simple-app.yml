@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: simple-app   # Apply only to simple-app pods
+      app: simple-app  
   process:
     matchPaths:
       - path: /etc
